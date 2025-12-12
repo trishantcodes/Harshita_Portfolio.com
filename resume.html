@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Resume of Harshita Sharma — Entry-level Interior Designer & Architecture graduate.">
+    <meta name="theme-color" content="#073b4c">
+
+    <title>Resume — Harshita Sharma</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/print.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Harshita Sharma",
+        "jobTitle": "Interior Designer",
+        "email": "mailto:harshita150369@gmail.com",
+        "sameAs": [
+            "https://linkedin.com/in/harshita-sharma",
+            "https://behance.net/harshita-sharma"
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bp: #073b4c;
+            --ivory: #f7f6f2;
+            --accent: #c0562b;
+            --muted: #6b7075
+        }
+
+        /* Page-specific layout for the resume — mobile-first */
+        .resume-hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem
+        }
+
+        .resume-hero .name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--bp)
+        }
+
+        .resume-hero .tag {
+            color: var(--muted);
+            margin-top: .25rem
+        }
+
+        .resume-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end
+        }
+
+        .resume-actions .btn {
+            margin-bottom: .5rem
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+            margin-top: 1.25rem
+        }
+
+        @media(min-width:880px) {
+            .resume-grid {
+                grid-template-columns: 320px 1fr;
+                align-items: start
+            }
+        }
+
+        .resume-left {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
+            padding: 1rem;
+            border-radius: 6px
+        }
+
+        .resume-right {
+            padding: 1rem
+        }
+
+        .section-title {
+            position: relative;
+            font-size: 0.95rem;
+            margin: 0 0 .75rem 0
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 40px;
+            background: var(--accent);
+            margin-top: 8px;
+            border-radius: 2px;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform .6s cubic-bezier(.2, .9, .3, 1)
+        }
+
+        .reveal.in-view .section-title::after {
+            transform: scaleX(1)
+        }
+
+        /* Skill bars */
+        .skill {
+            margin: 0.45rem 0
+        }
+
+        .skill-label {
+            font-size: .9rem;
+            margin-bottom: .25rem;
+            color: var(--bp)
+        }
+
+        .skill-bar {
+            background: #e8e9ea;
+            border-radius: 999px;
+            height: 10px;
+            overflow: hidden
+        }
+
+        .skill-bar>i {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, var(--bp), var(--accent));
+            width: 0%;
+            transition: width 900ms cubic-bezier(.2, .9, .3, 1)
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 1rem
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(#e9ecef, #dfe6ea)
+        }
+
+        .experience-item {
+            position: relative;
+            padding: 0.75rem 0 1rem 1.25rem
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -3px;
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid var(--bp);
+            box-shadow: 0 2px 4px rgba(2, 10, 20, 0.06)
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem
+        }
+
+        .experience-title {
+            font-weight: 700;
+            color: var(--bp)
+        }
+
+        .experience-company {
+            font-size: .9rem;
+            color: var(--muted)
+        }
+
+        .experience-dates {
+            font-size: .85rem;
+            color: var(--muted);
+            white-space: nowrap
+        }
+
+        /* Small print adjustments */
+        .contact-item a {
+            color: var(--bp);
+            text-decoration: none
+        }
+
+        .lead {
+            color: var(--muted);
+            line-height: 1.45
+        }
+
+        /* subtle blueprint paper background accent (local only) */
+        .paper-grid {
+            background-image: linear-gradient(90deg, rgba(7, 59, 76, 0.02) 1px, transparent 1px), linear-gradient(180deg, rgba(7, 59, 76, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px, 40px 40px
+        }
+
+        /* print friendly overrides */
+        @media print {
+
+            .site-header,
+            .site-footer,
+            .resume-actions {
+                display: none
+            }
+
+            body {
+                background: none
+            }
+
+            .resume-grid {
+                grid-template-columns: 260px 1fr
+            }
+
+            .skill-bar>i {
+                transition: none
+            }
+        }
+    </style>
+
+</head>
+
+<body class="site paper-grid">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header container" id="header">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem">
+            <div style="display:flex;flex-direction:column;">
+                <a href="index.html" aria-label="Harshita Sharma - Home"
+                    style="font-weight:800;color:var(--bp);text-decoration:none">HS</a>
+                <small style="color:var(--muted);margin-top:4px">Interior Design — Architecture Graduate</small>
+            </div>
+            <div class="resume-actions">
+                <button class="btn" onclick="window.print()" aria-label="Print resume">Print / Save PDF</button>
+                <div class="note" style="font-size:.85rem;color:var(--muted);">Indore, India</div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <div class="resume-hero">
+            <div>
+                <div class="name">Harshita Sharma</div>
+                <div class="tag">Entry-level Interior Designer • Child-Centric & Sustainable Design</div>
+            </div>
+        </div>
+
+        <div class="resume-grid">
+            <aside class="resume-left" role="complementary">
+                <section class="resume-section reveal" aria-labelledby="contact-heading">
+                    <h4 id="contact-heading" class="section-title">Contact</h4>
+                    <address class="contact-item" style="font-style:normal">
+                        <div><strong>Email</strong><br><a
+                                href="mailto:harshita150369@gmail.com">harshita150369@gmail.com</a></div>
+                        <div style="margin-top:.5rem"><strong>Phone</strong><br><a href="tel:+919876543210">+91 98765
+                                43210</a></div>
+                        <div style="margin-top:.5rem"><strong>Website</strong><br><a
+                                href="https://harshitasharma.design" target="_blank"
+                                rel="noopener">harshitasharma.design</a></div>
+                    </address>
+                </section>
+
+                <section class="resume-section reveal" aria-labelledby="skills-heading">
+                    <h4 id="skills-heading" class="section-title">Skills</h4>
+                    <div class="skill">
+                        <div class="skill-label">AutoCAD</div>
+                        <div class="skill-bar" data-level="92"><i style="width:0%" data-target="92"></i></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">SketchUp / Revit</div>
+                        <div class="skill-bar" data-level="78"><i style="width:0%" data-target="78"></i></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">Graphics & Presentation</div>
+                        <div class="skill-bar" data-level="85"><i style="width:0%" data-target="85"></i></div>
+                    </div>
+                    <div style="margin-top:.75rem;font-size:.9rem;color:var(--muted)">Other: Hand sketching • Material
+                        boards • Site measurement</div>
+                </section>
+
+                <section class="resume-section reveal" aria-labelledby="education-heading">
+                    <h4 id="education-heading" class="section-title">Education</h4>
+                    <div style="font-weight:700">Bachelor of Interior Design</div>
+                    <div style="color:var(--accent);font-weight:600">Shri Vaishnav Institute of Architecture</div>
+                    <div style="color:var(--muted);font-size:.9rem">Indore, India — 2020–2024</div>
+                </section>
+
+                <section class="resume-section reveal" aria-labelledby="languages-heading">
+                    <h4 id="languages-heading" class="section-title">Languages</h4>
+                    <ul style="padding-left:1rem;margin:.5rem 0;color:var(--muted)">
+                        <li>English (Fluent)</li>
+                        <li>Hindi (Native)</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <section class="resume-right">
+                <section class="resume-section reveal" aria-labelledby="summary-heading">
+                    <h4 id="summary-heading" class="section-title">Professional Summary</h4>
+                    <p class="lead">Entry-level interior designer and architecture graduate with strong academic project
+                        experience and internship exposure. Focused on creating safe, playful, and sustainable spaces
+                        for children and communities; experienced in producing technical drawings, client presentations,
+                        and material research. Seeking an entry-level role to contribute design work and develop in
+                        studio practice.</p>
+                </section>
+
+                <section class="resume-section reveal" aria-labelledby="experience-heading">
+                    <h4 id="experience-heading" class="section-title">Experience</h4>
+                    <div class="timeline">
+                        <article class="experience-item">
+                            <div class="experience-header">
+                                <div>
+                                    <div class="experience-title">Thesis Project Lead</div>
+                                    <div class="experience-company">Shri Vaishnav Institute of Architecture</div>
+                                </div>
+                                <div class="experience-dates">2023 – 2024</div>
+                            </div>
+                            <ul class="experience-desc">
+                                <li>Led research and design for a child-centric "Kid's Library" with zoning, furniture
+                                    design and activity nodes.</li>
+                                <li>Developed full CAD drawings, presentation boards and interactive workshop sessions
+                                    with children.</li>
+                            </ul>
+                        </article>
+
+                        <article class="experience-item">
+                            <div class="experience-header">
+                                <div>
+                                    <div class="experience-title">Interior Design Intern</div>
+                                    <div class="experience-company">Local Design Firm</div>
+                                </div>
+                                <div class="experience-dates">2022 – 2023</div>
+                            </div>
+                            <ul class="experience-desc">
+                                <li>Prepared floor plans, elevations and material boards for residential and small
+                                    commercial clients.</li>
+                                <li>Coordinated site measurements and client presentations to support senior designers.
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="experience-item">
+                            <div class="experience-header">
+                                <div>
+                                    <div class="experience-title">Academic Studio Projects</div>
+                                    <div class="experience-company">University Studios</div>
+                                </div>
+                                <div class="experience-dates">2020 – 2024</div>
+                            </div>
+                            <ul class="experience-desc">
+                                <li>Produced precedent studies, program diagrams, and iterative sketches supporting
+                                    multiple interior proposals.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="resume-section reveal" aria-labelledby="projects-heading">
+                    <h4 id="projects-heading" class="section-title">Selected Projects</h4>
+                    <div style="margin-bottom:.6rem">
+                        <strong>Kid's Library — Thesis</strong><br>
+                        <span class="text-muted">Research-driven interior design for child-focused learning — zoning,
+                            materiality and user-tested activities.</span>
+                    </div>
+                    <div style="margin-bottom:.6rem">
+                        <strong>Residential Interior Redesign</strong><br>
+                        <span class="text-muted">Space planning, furniture layout and finish selection for an urban
+                            residence.</span>
+                    </div>
+                </section>
+
+                <section class="resume-section reveal" aria-labelledby="dev-heading">
+                    <h4 id="dev-heading" class="section-title">Professional Development</h4>
+                    <ul style="padding-left:1rem;margin:.5rem 0;color:var(--muted)">
+                        <li>Workshops: Sustainable Materials, Child-Centered Design</li>
+                        <li>Online: Revit & advanced SketchUp rendering courses</li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer container" style="margin-top:2rem">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+            <div><strong>Harshita Sharma</strong><br><a
+                    href="mailto:harshita150369@gmail.com">harshita150369@gmail.com</a></div>
+            <div style="color:var(--muted)"><a href="https://linkedin.com/in/harshita-sharma" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a> — <a href="https://behance.net/harshita-sharma"
+                    target="_blank" rel="noopener noreferrer">Behance</a></div>
+        </div>
+    </footer>
+
+    <script>
+        // Small reveal and skill-bar animation for this page
+        document.addEventListener('DOMContentLoaded', function () {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('in-view');
+                        // animate skill bars when visible
+                        e.target.querySelectorAll && e.target.querySelectorAll('.skill-bar > i').forEach(el => {
+                            const target = el.getAttribute('data-target') || el.dataset.target;
+                            if (target) { el.style.width = target + '%' }
+                        });
+                    }
+                })
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+            // Also reveal timeline items and ensure their markers animate
+            document.querySelectorAll('.experience-item').forEach(el => io.observe(el));
+        });
+    </script>
+
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>

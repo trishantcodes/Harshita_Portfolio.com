@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact Harshita Sharma — Interior Designer & Architecture Student">
+    <meta name="theme-color" content="#073b4c">
+    <title>Contact — Harshita Sharma</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="site">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header class="site-header" id="header">
+        <div class="container header-grid">
+            <div class="logo"><a href="index.html">HARSHITA SHARMA</a></div>
+            <nav class="main-nav" aria-label="Primary navigation" id="nav">
+                <button class="hamburger" aria-controls="nav-list" aria-expanded="false"
+                    aria-label="Toggle navigation menu">☰</button>
+                <ul id="nav-list" class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <h1 class="display">Contact</h1>
+        <p class="lead">I'd love to hear about new opportunities, collaborations, or feedback.</p>
+
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn primary">Send Message</button>
+            <div id="formMessage" role="status" aria-live="polite"></div>
+        </form>
+
+        <div style="margin-top: 2rem;">
+            <a class="btn outline" href="resume.html">Download Resume (PDF)</a>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>Harshita Sharma</strong><br>
+                <a href="mailto:harshita150369@gmail.com">harshita150369@gmail.com</a>
+            </div>
+            <div class="socials">
+                <a href="https://linkedin.com/in/harshita-sharma">LinkedIn</a>
+                <a href="https://behance.net/harshita-sharma">Behance</a>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>
