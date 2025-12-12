@@ -1,0 +1,7 @@
+/* print.css — minimal one page print style for resume */
+@page { margin:0.5in; }
+body { background: white !important; color: #000; font-size:12pt; }
+header, footer, nav, .btn, .note { display:none !important; }
+.container { width:100%; padding:0; margin:0; }
+.resume-grid { display:block; }
+.resume-left, .resume-right { border:0; box-shadow:none; padding:0; margin:0; }
